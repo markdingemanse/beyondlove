@@ -68,8 +68,16 @@ class RssCheckJob extends Job
     }
 
     private function sendMail($post, $newItem, $label, $mail) {
-        Log::info("Starting to send mail!!!");
-        $mail->queue(new RssMail($newItem, $post, $label));
-        Log::info("Mail is send!!!");
+        Log::info("[BEYONDLOVE]:: Starting to send mail!!!");
+
+        if (! env(BEYONDLOVE_FAKE)) {
+            $mail->queue(new RssMail($newItem, $post, $label));
+        } else {
+            Log::debug("[BEYONDLOVE]:: newItem: $newItem");
+            Log::debug("[BEYONDLOVE]:: post: $post");
+            Log::debug("[BEYONDLOVE]:: label: $label");
+        }
+
+        Log::info("[BEYONDLOVE]:: Mail is send!!!");
     }
 }
