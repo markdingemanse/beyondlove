@@ -45,8 +45,8 @@ class BeyondloveProvider extends ServiceProvider
     protected function routes()
     {
         Route::get('/', 'HomepageController@launch')->middleware('web')->namespace($this->namespace)->name('homepage');
-        Route::get('random', 'HomepageController@getRandomFile')->namespace($this->namespace)->->name('getFile');
-        Route::get('upload','HomepageController@uploadfileview')->namespace($this->namespace)->->name('upload_background_view');
-        Route::post('upload','HomepageController@uploadFile')->namespace($this->namespace)->->name('upload_background_post');
+        Route::get('random', 'HomepageController@getRandomFile')->namespace($this->namespace)->name('getFile');
+        Route::get('upload','HomepageController@uploadfileview')->namespace($this->namespace)->name('upload_background_view');
+        Route::post('upload','HomepageController@uploadFile')->namespace($this->namespace)->name('upload_background_post');
     }
 }
