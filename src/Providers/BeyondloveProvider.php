@@ -14,7 +14,7 @@ class BeyondloveProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'MarkDingemanse\Beyondlove\Controllers';
+    protected $namespace = 'MarkDingemanse\\Beyondlove\\Controllers\\';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -23,11 +23,11 @@ class BeyondloveProvider extends ServiceProvider
      */
     public function boot()
     {
-        Route::get('/', 'HomepageController@launch')->middleware('web')->namespace($this->namespace)->name('homepage');
-        Route::get('random', 'HomepageController@getRandomFile')->namespace($this->namespace)->name('getFile');
-        Route::get('upload','HomepageController@uploadfileview')->namespace($this->namespace)->name('upload_background_view');
-        Route::post('upload','HomepageController@uploadFile')->namespace($this->namespace)->name('upload_background_post');
-    
+        Route::middleware('web')->get('/', $this->namespace.'HomepageController@launch')->name('homepage');
+        Route::get('random', $this->namespace.'HomepageController@getRandomFile')->name('getFile');
+        Route::get('upload', $this->namespace.'HomepageController@uploadfileview')->name('upload_background_view');
+        Route::post('upload', $this->namespace.'HomepageController@uploadFile')->name('upload_background_post');
+
         parent::boot();
     }
 }
