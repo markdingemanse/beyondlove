@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services;
+namespace MarkDingemanse\Beyondlove\Services;
 
 use Illuminate\Support\Collection;
 
