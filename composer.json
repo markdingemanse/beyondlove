@@ -12,8 +12,8 @@
     "autoload": {
         "classmap": [
             "database/migrations",
-            "database/seeds"
-            "database/factories"
+            "database/seeds",
+            "database/factories",
         ],
         "psr-4": {
             "MarkDingemanse\\Beyondlove\\": "src/"
