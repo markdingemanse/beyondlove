@@ -12,8 +12,6 @@ class Rss extends Model
      * {@inheritdoc}
      */
 
-    protected $connection = 'mysql';
-
     /**
      * {@inheritdoc}
      */
