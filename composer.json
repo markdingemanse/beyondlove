@@ -5,16 +5,12 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": "^8.0.0"
+        "php": "^8.0.0",
+        "willvincent/feeds": "dev-master",
     },
     "require-dev": {
     },
     "autoload": {
-        "classmap": [
-            "database/migrations",
-            "database/seeds",
-            "database/factories"
-        ],
         "psr-4": {
             "MarkDingemanse\\Beyondlove\\": "src/"
         }
