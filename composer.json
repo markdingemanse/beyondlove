@@ -13,7 +13,7 @@
         "classmap": [
             "database/migrations",
             "database/seeds",
-            "database/factories",
+            "database/factories"
         ],
         "psr-4": {
             "MarkDingemanse\\Beyondlove\\": "src/"
