@@ -4,7 +4,7 @@ namespace MarkDingemanse\Beyondlove\Services;
 
 use Illuminate\Support\Collection;
 
-class image
+class Image
 {
     protected $publicPath = "../public/img";
 
