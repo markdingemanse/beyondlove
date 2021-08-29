@@ -6,8 +6,6 @@ use Illuminate\Support\Collection;
 
 class Image
 {
-    protected $publicPath = "../public/img";
-
     protected $blackList = [
         '.',
         '..',
@@ -46,6 +44,11 @@ class Image
 
     function getPublicPath()
     {
-        return $this->publicPath;
+        return public_path('/img');
+    }
+
+    public function buildFileName(string $extension): string
+    {
+        return "bgn" . time() . '.' . $extension;
     }
 }
